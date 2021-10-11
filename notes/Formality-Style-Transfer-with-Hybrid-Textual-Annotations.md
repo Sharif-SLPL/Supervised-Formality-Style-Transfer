@@ -15,3 +15,4 @@ the first advantage is it can be easily adapted to other text style transfer tas
 ## 5.The problem that could be addressed in the future.
 -Incomplete transfer and neglect of informal words
 -failure to handle named entities.
+kjhkjhkjhkjh
