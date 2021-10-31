@@ -1,1 +1,46 @@
 
+# Automatic Standardization of Colloquial Persian
+
+
+## 1.What is the problem
+
+This paper describes a simple and effective standardization approach based on sequence-to-sequence translation. They design an algorithm for generating artificial 
+parallel colloquial-to-standard data for learning a sequence-to-sequence model. Moreover, they annotate a publicly available evaluation data consisting of 1912 
+sentences from a diverse set of domains. Their intrinsic evaluation shows a higher BLEU score of 62.8 versus 61.7 compared to an off-the-shelf rule-based 
+standardization model in which the original text has a BLEU score of 46.4. They also show that their model improves English-to-Persian machine translation in 
+scenarios for which the training data is from colloquial Persian with 1.4 absolute BLEU score difference in the development data, and 0.8 in the test data.
+
+
+## 2.What is the novelty of the article.
+
+They proposed an automatic method for standardizing colloquial Persian text. The core idea behind their work is training a sequence-to-sequence translation model 
+(Vaswani et al., 2017) that translates colloquial Persian to standard Persian.
+Their contribution is three-fold: 1) They proposed a novel method for training translation models from colloquial to standard Persian, and show improvements over
+an off-the-shelf rule-based model. 2) They provided a publicly available manually annotated evaluation data for colloquial Persian with two types of standardization
+for which the first only concerns surface word forms, and the second considers making the text stylistically standard. 3) they showed that their method improves 
+English-to-Persian machine translation trained on colloquial Persian data.
+
+
+## 3.How is this solved?
+
+They modeled colloquial-to-standard text conversion as machine translation. The input to the system is a sequence of colloquial words {x1 . . . xn} and the output
+is a sequence of standard word forms {y1 ...ym} where n and m are not necessarily equal. They trained a standard neural machine translation model with attention 
+(Vaswani et al., 2017) on a training data in which each colloquial sentence is accompanied by its standard version.
+Neural machine translation uses sequence-to-sequence models with attention (Cho et al., 2014; Bahdanau et al., 2015; Vaswani et al., 2017) for which the likelihood 
+of training data D = {(x(1),y(1))...(x(|D|),y(|D|))} is maximized by maximizing the loglikelihood of predicting each target word given its previous predicted words
+and source sequence.
+### Dataset; They used the Wikipedia dump of Persian as standard text in addition to one million sentences from the Mizan corpus (Kashefi, 2018). They randomly 
+break words and use this data as training data for standardization. For machine translation evaluation, we use the TEP parallel data (Pilevar et al., 2011) which
+is a collection of 600K translated movie subtitles in colloquial Persian.
+
+
+## 4.The advantages and disadvantages of the experiment.
+
+### Advantages: 1) They showed that by creating artificial training data, they can leverage commonly known patterns of breaking standard forms to colloquial, 
+and learn an accurate standardization model. 2) Their results show the BLEU scores of their model versus the rule-based Hazm tool. Their model does a much better job in making the
+text closer to standard form.
+###  They mentioned no disadvantages
+
+## 5.The problem that could be addressed in the future.
+
+They observe some very few cases in which their model generates an irrelevant word.
