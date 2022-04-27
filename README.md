@@ -11,8 +11,8 @@
 </div>
 
 
-# Supervised-Formality-Style-Transfer with Reinforcement Learning Framework - Mona Ebrahimi's Thesis
-Formality style transfer is the task of modifying the formality of a given sentence without changing its content. Its challenge is the lack of large-scale sentence-aligned parallel data. In this paper, we propose a Reinforcement Learning Framework that takes psedo-parallel data and transfer the informal sentence to a formal style by appllying a dual training approach.
+# Supervised-Formality-Style-Transfer with Reinforcement Learning Framework(Persian Language) - Mona Ebrahimi's Thesis
+Formality style transfer is the task of modifying the formality of a given sentence without changing its content. Its challenge is the lack of large-scale sentence-aligned parallel data. In this research, we propose a Reinforcement Learning Framework that takes psedo-parallel data and transfer the informal sentence to a formal style by appllying a dual training approach.
 
 <div align="center">
  
@@ -25,10 +25,10 @@ Formality style transfer is the task of modifying the formality of a given sente
 ## Training Data
 
 - **Pseudo-parallel data:**
-Digikala's Comments dataset is our dataset, the pseudo-parallel data created by a rulebased informal to formal model, data is created from two part; one is a parallel dataset which contain two aligned files(informal and formal). another one is the tsf folder which has both informal >>>>> formal and formal >>>>> informal in each file for training the dual training in each direction.
+Digikala's Comments dataset is our dataset which is a persian dataset, after preprocessing the pseudo-parallel data created by a rulebased informal to formal model, data is created from two part; one is a parallel dataset which contain two aligned files(informal and formal). another one is the tsf folder which has both informal >>>>> formal and formal >>>>> informal in each file for training the dual training in each direction.
 
 - **Evaluation Dataset:**
-Our evaluation dataset(Shekasteh Dataset) is recently published and its sentences has various topics.
+Our evaluation dataset(Shekasteh Dataset) which is recently published is an evaluation informal-formal dataset and its sentences has various topics.
 
 ## Quick Start
 
